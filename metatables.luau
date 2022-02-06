@@ -1,7 +1,14 @@
-require("C:\\Users\\Velmi_r\\Documents\\stuff\\languages\\Luau\\velmi_r")()
-
 function clonetab(tab:{}):{}
         return {unpack(tab)}
+end
+function randnum(start:number,end_:number?):number
+        if not end_ then
+                end_ = start
+                start = 0
+        end
+        local num:number = math.random() * end_
+        if num < start then num = start end
+        return num
 end
 metatable = {
         __newindex = function(self:{number},index:number,val)
